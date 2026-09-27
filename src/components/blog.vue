@@ -1,4 +1,8 @@
 <script setup>
+import { ref } from 'vue'
+
+const title = ref('Blog')
+
 const posts = [
   {
     id: 1,
@@ -27,15 +31,14 @@ const posts = [
 <template>
   <div class="container py-5">
 
-    <!-- Page Header -->
     <div class="text-center mb-5">
-      <h1 class="fw-bold text-primary">Blog</h1>
+      <h1 class="fw-bold text-primary">{{ title }}</h1>
+
       <p class="text-muted">
         Explore articles about Vue.js, routing, and web development.
       </p>
     </div>
 
-    <!-- Blog Posts -->
     <div class="row g-4">
       <div
         v-for="post in posts"

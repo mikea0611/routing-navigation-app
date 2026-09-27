@@ -1,3 +1,11 @@
+<script setup>
+import { ref } from 'vue'
+
+const message = ref(
+  'A simple single-page application built with Vue 3, Vue Router 4, Vite, and Bootstrap.'
+)
+</script>
+
 <template>
   <div>
     <!-- Hero Section -->
@@ -8,8 +16,7 @@
         </h1>
 
         <p class="lead text-muted mt-3 mb-4">
-          A simple single-page application built with Vue 3,
-          Vue Router 4, Vite, and Bootstrap.
+          {{ message }}
         </p>
 
         <RouterLink to="/about" class="btn btn-primary btn-lg me-2">

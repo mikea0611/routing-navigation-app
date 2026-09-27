@@ -28,13 +28,15 @@ const submitForm = () => {
       </p>
     </div>
 
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
+    <div class="row g-4">
 
-        <div class="card shadow-sm">
+      <!-- Contact Form -->
+      <div class="col-lg-8">
+        <div class="card shadow-sm h-100">
           <div class="card-body p-4 p-md-5">
 
-            <!-- Success Message -->
+            <h2 class="h3 text-primary mb-4">Send a Message</h2>
+
             <div
               v-if="submitted"
               class="alert alert-success"
@@ -43,12 +45,9 @@ const submitForm = () => {
               Your message has been submitted successfully!
             </div>
 
-            <!-- Contact Form -->
             <form @submit.prevent="submitForm">
-
               <div class="row g-3">
 
-                <!-- Name -->
                 <div class="col-md-6">
                   <label for="name" class="form-label">
                     Name
@@ -64,7 +63,6 @@ const submitForm = () => {
                   >
                 </div>
 
-                <!-- Email -->
                 <div class="col-md-6">
                   <label for="email" class="form-label">
                     Email
@@ -80,7 +78,6 @@ const submitForm = () => {
                   >
                 </div>
 
-                <!-- Subject -->
                 <div class="col-12">
                   <label for="subject" class="form-label">
                     Subject
@@ -96,7 +93,6 @@ const submitForm = () => {
                   >
                 </div>
 
-                <!-- Message -->
                 <div class="col-12">
                   <label for="message" class="form-label">
                     Message
@@ -112,7 +108,6 @@ const submitForm = () => {
                   ></textarea>
                 </div>
 
-                <!-- Button -->
                 <div class="col-12">
                   <button
                     type="submit"
@@ -123,13 +118,57 @@ const submitForm = () => {
                 </div>
 
               </div>
-
             </form>
 
           </div>
         </div>
-
       </div>
+
+      <!-- Consultation Information -->
+      <div class="col-lg-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body p-4">
+
+            <h2 class="h4 text-primary mb-4">
+              Lab Consultation Desk
+            </h2>
+
+            <p>
+              For questions regarding this laboratory activity,
+              students may coordinate with the course instructor
+              during the available consultation period.
+            </p>
+
+            <hr>
+
+            <p class="mb-2">
+              <strong>Course</strong>
+            </p>
+
+            <p class="text-muted">
+              WD 301 - Web Server and Client Services
+            </p>
+
+            <p class="mb-2">
+              <strong>Instructor</strong>
+            </p>
+
+            <p class="text-muted">
+              Prof. J. Esquivel
+            </p>
+
+            <p class="mb-2">
+              <strong>Activity</strong>
+            </p>
+
+            <p class="text-muted mb-0">
+              VueJS Routing, Navigation & Cloud Production Deployment
+            </p>
+
+          </div>
+        </div>
+      </div>
+
     </div>
 
   </div>
